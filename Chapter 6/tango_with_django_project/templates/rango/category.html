@@ -7,7 +7,7 @@
 <body>
     <div>
         {% if category %}
-            <h1>{{ category }}</h1>
+            <h1>{{ category.name }}</h1>
             {% if pages %}
             <ul>
                 {% for page in pages %}
@@ -16,10 +16,10 @@
             </ul>
             {% else %}
             <strong>No pages currently in category.</strong>
-            {% end if %}
+            {% endif %}
         {% else %}
             The specified category does not exist.
-        {% end if %}
+        {% endif %}
     </div>
 </body>
 </html>
